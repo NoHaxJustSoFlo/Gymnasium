@@ -1,4 +1,6 @@
 # depslib dependency file v1.0
-1587818586 source:c:\users\toni\documents\github\gymnasium\gymnasium\main.cpp
+1587905424 source:c:\users\toni\documents\github\gymnasium\gymnasium\main.cpp
 	<iostream>
+	<chrono>
+	<cstring>
 
