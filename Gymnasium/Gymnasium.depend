@@ -1,6 +1,76 @@
 # depslib dependency file v1.0
-1587905424 source:c:\users\toni\documents\github\gymnasium\gymnasium\main.cpp
+1588850538 source:c:\users\toni\documents\github\gymnasium\gymnasium\main.cpp
 	<iostream>
 	<chrono>
 	<cstring>
+	"Gymnasium.hpp"
+	"Class.hpp"
+	"Timetable.hpp"
+	"SchoolDay.hpp"
+	"Diary.hpp"
+	"Note.hpp"
+	"StudentDiaryPage.hpp"
+	"Grades.hpp"
+	"Subject.hpp"
+	"Professor.hpp"
+	"Student.hpp"
+	"ReportCard.hpp"
+	"CompletedSubject.hpp"
+	"Grade.hpp"
+	"Date.hpp"
+	"Person.hpp"
+	"List.hpp"
+	"Enums.hpp"
+
+1588850675 c:\users\toni\documents\github\gymnasium\gymnasium\gymnasium.hpp
+	"List.hpp"
+	"Class.hpp"
+	"Student.hpp"
+
+1588850582 c:\users\toni\documents\github\gymnasium\gymnasium\list.hpp
+
+1588850631 c:\users\toni\documents\github\gymnasium\gymnasium\class.hpp
+	"Person.hpp"
+	"Professor.hpp"
+	"Timetable.hpp"
+
+1588850613 c:\users\toni\documents\github\gymnasium\gymnasium\person.hpp
+	"Enums.hpp"
+
+1588849899 c:\users\toni\documents\github\gymnasium\gymnasium\enums.hpp
+
+1588849670 c:\users\toni\documents\github\gymnasium\gymnasium\professor.hpp
+
+1588850639 c:\users\toni\documents\github\gymnasium\gymnasium\timetable.hpp
+	"SchoolDay.hpp"
+
+1588850663 c:\users\toni\documents\github\gymnasium\gymnasium\schoolday.hpp
+	"Subject.hpp"
+	"List.hpp"
+
+1588849651 c:\users\toni\documents\github\gymnasium\gymnasium\subject.hpp
+
+1588850683 c:\users\toni\documents\github\gymnasium\gymnasium\student.hpp
+	"ReportCard.hpp"
+
+1588850702 c:\users\toni\documents\github\gymnasium\gymnasium\reportcard.hpp
+	"CompletedSubject.hpp"
+
+1588849751 c:\users\toni\documents\github\gymnasium\gymnasium\completedsubject.hpp
+
+1588850713 c:\users\toni\documents\github\gymnasium\gymnasium\diary.hpp
+	"StudentDiaryPage.hpp"
+
+1588850775 c:\users\toni\documents\github\gymnasium\gymnasium\studentdiarypage.hpp
+	"Grades.hpp"
+
+1588850731 c:\users\toni\documents\github\gymnasium\gymnasium\grades.hpp
+	"Grade.hpp"
+
+1588850737 c:\users\toni\documents\github\gymnasium\gymnasium\grade.hpp
+	"Date.hpp"
+
+1588849792 c:\users\toni\documents\github\gymnasium\gymnasium\date.hpp
+
+1588850338 c:\users\toni\documents\github\gymnasium\gymnasium\note.hpp
 
