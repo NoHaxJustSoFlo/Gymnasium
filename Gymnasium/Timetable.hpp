@@ -8,9 +8,14 @@ class Timetable
 protected:
     List<SchoolDay> days;
 public:
-    Timetable(List<SchoolDay> days)
+    Timetable(){}
+    Timetable(List<SchoolDay>& days)
     {
         this->days = days;
+    }
+    Timetable(Timetable& timetable)
+    {
+        days = timetable.days;
     }
     void ChangeSchoolDay(SchoolDays day, List<Subject> subjects)
     {

@@ -4,6 +4,7 @@
 #include "List.hpp"
 #include "Class.hpp"
 #include "Student.hpp"
+#include "Employee.hpp"
 
 using namespace std;
 
@@ -14,6 +15,19 @@ protected:
     List<Class> classes;
     List<Employee> employees;
 public:
+    Gymnasium(){}
+    Gymnasium(string name, List<Class> classes, List<Employee> employees)
+    {
+        this->name = name;
+        this->classes = classes;
+        this->employees = employees;
+    }
+    Gymnasium(Gymnasium& gymnasium)
+    {
+        this->name = name;
+        this->classes = classes;
+        this->employees = employees;
+    }
     void AddClass(Class* newClass)
     {
         classes.Add(newClass);
@@ -83,13 +97,13 @@ public:
         out << "Employees:\n";
         for(int i = 0; i < gymnasium.employees.Length(); i++)
         {
-            cout << gymnasium.employees[i] << endl;
+            out << gymnasium.employees[i] << endl;
         }
+        out << gymnasium.classes.Length();
         for(int i = 0; i < gymnasium.classes.Length(); i++)
         {
-            cout << gymnasium.classes[i] << endl;
+            out << gymnasium.classes[i] << endl;
         }
-
         return out;
     }
     Gymnasium& operator+=(Employee& employee)

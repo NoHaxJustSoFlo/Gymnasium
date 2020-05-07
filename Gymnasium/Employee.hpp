@@ -6,6 +6,10 @@
 class Employee : public Student
 {
 public:
+    Employee()
+    {
+
+    }
     Employee(float elementarySchoolTestPoints, float highSchoolTestPoints, float universityHighTestPoints,List<ReportCard> reportCards, int age, Gender gender, string firstName, string lastName) :
         Student(elementarySchoolTestPoints, highSchoolTestPoints, universityHighTestPoints, reportCards, age, gender, firstName, lastName)
     {

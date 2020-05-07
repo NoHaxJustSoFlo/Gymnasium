@@ -10,9 +10,18 @@ protected:
     Student* student;
     List<Grades> subjects;
 public:
+    StudentDiaryPage()
+    {
+        student = null;
+    }
     StudentDiaryPage(Student* student)
     {
         this->student = student;
+    }
+    StudentDiaryPage(StudentDiaryPage& sdp)
+    {
+        student = sdp.student;
+        subjects = sdp.subjects;
     }
     Student* GetStudent()
     {

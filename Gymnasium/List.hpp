@@ -24,11 +24,6 @@ public:
         length = 0;
     }
 
-    ~List<T>()
-    {
-        Clear();
-    }
-
     void Clear()
     {
         while(length > 0)
@@ -166,7 +161,15 @@ public:
         }
         return *(temp->element);
     }
-
+    List<T>& operator=(List<T>& list)
+    {
+        Clear();
+        for(int i = 0; i < list.length; i++)
+        {
+            this->Add(&list[i]);
+        }
+        return *this;
+    }
 };
 
 #endif // LIST_HPP_INCLUDED

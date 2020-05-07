@@ -8,6 +8,11 @@ protected:
     List<int> grades;
     float averageGrade;
 public:
+    CompletedSubject()
+    {
+        subject = Mathematics;
+        averageGrade = -1;
+    }
     CompletedSubject(SubjectTypes subject, List<int> grades)
     {
         this->subject = subject;
@@ -19,6 +24,12 @@ public:
             total += grades[i];
         }
         averageGrade = total / amount;
+    }
+    CompletedSubject(CompletedSubject& subjectCom)
+    {
+        subject = subjectCom.subject;
+        grades = subjectCom.grades;
+        averageGrade = subjectCom.averageGrade;
     }
     float GetAverageGrade()
     {

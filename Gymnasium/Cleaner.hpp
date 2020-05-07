@@ -6,8 +6,16 @@
 class Cleaner : Employee
 {
 public:
+    Cleaner()
+    {
+
+    }
     Cleaner(float elementarySchoolTestPoints, float highSchoolTestPoints, float universityHighTestPoints,List<ReportCard> reportCards, int age, Gender gender, string firstName, string lastName)
     : Employee(elementarySchoolTestPoints, highSchoolTestPoints, universityHighTestPoints, reportCards, age, gender, firstName, lastName)
+    {
+
+    }
+    Cleaner(Cleaner& cleaner) : Employee(cleaner)
     {
 
     }

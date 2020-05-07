@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1588854019 source:c:\users\toni\documents\github\gymnasium\gymnasium\main.cpp
+1588885065 source:c:\users\toni\documents\github\gymnasium\gymnasium\main.cpp
 	<iostream>
 	<chrono>
 	<cstring>
@@ -25,67 +25,70 @@
 	"Employee.hpp"
 	"Cleaner.hpp"
 
-1588859328 c:\users\toni\documents\github\gymnasium\gymnasium\gymnasium.hpp
+1588886770 c:\users\toni\documents\github\gymnasium\gymnasium\gymnasium.hpp
 	"List.hpp"
 	"Class.hpp"
 	"Student.hpp"
+	"Employee.hpp"
 
-1588852930 c:\users\toni\documents\github\gymnasium\gymnasium\list.hpp
+1588886832 c:\users\toni\documents\github\gymnasium\gymnasium\list.hpp
 
-1588859260 c:\users\toni\documents\github\gymnasium\gymnasium\class.hpp
+1588888088 c:\users\toni\documents\github\gymnasium\gymnasium\class.hpp
 	"Person.hpp"
 	"Professor.hpp"
 	"Timetable.hpp"
+	"Diary.hpp"
 
-1588858972 c:\users\toni\documents\github\gymnasium\gymnasium\person.hpp
+1588887847 c:\users\toni\documents\github\gymnasium\gymnasium\person.hpp
 	"Enums.hpp"
 
 1588846299 c:\users\toni\documents\github\gymnasium\gymnasium\enums.hpp
 
-1588858784 c:\users\toni\documents\github\gymnasium\gymnasium\professor.hpp
+1588888056 c:\users\toni\documents\github\gymnasium\gymnasium\professor.hpp
 	"Employee.hpp"
 
-1588849760 c:\users\toni\documents\github\gymnasium\gymnasium\timetable.hpp
+1588887035 c:\users\toni\documents\github\gymnasium\gymnasium\timetable.hpp
 	"SchoolDay.hpp"
 
-1588847063 c:\users\toni\documents\github\gymnasium\gymnasium\schoolday.hpp
+1588887931 c:\users\toni\documents\github\gymnasium\gymnasium\schoolday.hpp
 	"Subject.hpp"
 	"List.hpp"
 
 1588846051 c:\users\toni\documents\github\gymnasium\gymnasium\subject.hpp
 
-1588858994 c:\users\toni\documents\github\gymnasium\gymnasium\student.hpp
+1588888028 c:\users\toni\documents\github\gymnasium\gymnasium\student.hpp
 	"ReportCard.hpp"
 	"FinalTest.hpp"
 
-1588847102 c:\users\toni\documents\github\gymnasium\gymnasium\reportcard.hpp
+1588887567 c:\users\toni\documents\github\gymnasium\gymnasium\reportcard.hpp
 	"CompletedSubject.hpp"
 
-1588846151 c:\users\toni\documents\github\gymnasium\gymnasium\completedsubject.hpp
+1588888407 c:\users\toni\documents\github\gymnasium\gymnasium\completedsubject.hpp
 
-1588859318 c:\users\toni\documents\github\gymnasium\gymnasium\diary.hpp
+1588887163 c:\users\toni\documents\github\gymnasium\gymnasium\diary.hpp
 	"StudentDiaryPage.hpp"
+	"Note.hpp"
 
-1588859200 c:\users\toni\documents\github\gymnasium\gymnasium\studentdiarypage.hpp
+1588887199 c:\users\toni\documents\github\gymnasium\gymnasium\studentdiarypage.hpp
 	"Grades.hpp"
 
-1588847131 c:\users\toni\documents\github\gymnasium\gymnasium\grades.hpp
+1588887227 c:\users\toni\documents\github\gymnasium\gymnasium\grades.hpp
 	"Grade.hpp"
 
-1588847137 c:\users\toni\documents\github\gymnasium\gymnasium\grade.hpp
+1588888067 c:\users\toni\documents\github\gymnasium\gymnasium\grade.hpp
 	"Date.hpp"
 
 1588846192 c:\users\toni\documents\github\gymnasium\gymnasium\date.hpp
 
-1588846738 c:\users\toni\documents\github\gymnasium\gymnasium\note.hpp
+1588888448 c:\users\toni\documents\github\gymnasium\gymnasium\note.hpp
 
-1588858134 c:\users\toni\documents\github\gymnasium\gymnasium\employee.hpp
+1588888043 c:\users\toni\documents\github\gymnasium\gymnasium\employee.hpp
 	"Student.hpp"
 
 1588851381 c:\users\toni\documents\github\gymnasium\gymnasium\finaltest.hpp
 
 1588852718 c:\users\toni\documents\github\gymnasium\gymnasium\director.hpp
 
-1588852603 c:\users\toni\documents\github\gymnasium\gymnasium\cleaner.hpp
+1588888119 c:\users\toni\documents\github\gymnasium\gymnasium\cleaner.hpp
 	"Employee.hpp"
 

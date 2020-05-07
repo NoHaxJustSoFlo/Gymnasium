@@ -9,9 +9,18 @@ protected:
     List<Grade> grades;
     SubjectTypes subject;
 public:
+    Grades()
+    {
+        subject = Mathematics;
+    }
     Grades(SubjectTypes subject)
     {
         this->subject = subject;
+    }
+    Grades(Grades& grades)
+    {
+        this->grades = grades.grades;
+        subject = grades.subject;
     }
     void AddGrade(Grade* grade)
     {

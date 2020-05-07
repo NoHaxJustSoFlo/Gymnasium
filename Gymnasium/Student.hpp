@@ -10,6 +10,10 @@ protected:
     List<ReportCard> reportCards;
     List<FinalTest> testPoints;
 public:
+    Student()
+    {
+
+    }
     Student(float elementarySchoolTestPoints, float highSchoolTestPoints, float universityHighTestPoints,List<ReportCard> reportCards, int age, Gender gender, string firstName, string lastName) : Person(age, gender, firstName, lastName)
     {
         if(elementarySchoolTestPoints >= 0)
@@ -25,6 +29,11 @@ public:
             testPoints.Add(new FinalTest(universityHighTestPoints, 100, University));
         }
         this->reportCards = reportCards;
+    }
+    Student(Student& student) : Person(student)
+    {
+        reportCards = student.reportCards;
+        testPoints = student.testPoints;
     }
     void AddReportCard(ReportCard* reportCard)
     {

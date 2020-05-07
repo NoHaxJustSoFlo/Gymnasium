@@ -12,9 +12,18 @@ protected:
     SchoolDays day;
     List<Subject> subjects;
 public:
+    SchoolDay()
+    {
+        day = Monday;
+    }
     SchoolDay(SchoolDays day)
     {
         this->day = day;
+    }
+    SchoolDay(SchoolDay& schoolDay)
+    {
+         this->day = schoolDay.day;
+         subjects = schoolDay.subjects;
     }
     void ChangeSubjects(List<Subject> subjects)
     {

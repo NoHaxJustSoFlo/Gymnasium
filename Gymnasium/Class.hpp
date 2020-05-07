@@ -4,6 +4,7 @@
 #include "Person.hpp"
 #include "Professor.hpp"
 #include "Timetable.hpp"
+#include "Diary.hpp"
 
 class Class
 {
@@ -15,14 +16,31 @@ protected:
     List<Person> students;
     Professor* teacher;
     Timetable* timetable;
+    Diary diary;
 public:
-    Class(float minimumPoints, int number, string direction)
+    Class()
+    {
+        minimumPoints = 0;
+        grade = 1;
+        direction = "Nista";
+        teacher = null;
+        timetable = null;
+    }
+    Class(float minimumPoints, int number, string direction) : diary(1, number)
     {
         grade = 1;
         this->direction = direction;
         this->number = number;
     }
-
+    Class(Class& copyClass)
+    {
+        minimumPoints = copyClass.minimumPoints;
+        grade = copyClass.grade;
+        direction = copyClass.direction;
+        students = copyClass.students;
+        teacher = copyClass.teacher;
+        timetable = copyClass.timetable;
+    }
     void SetMinimumPoints(float m)
     {
         minimumPoints = m;
@@ -50,10 +68,13 @@ public:
     void AddStudent(Person& student)
     {
         students.Add(&student);
+        StudentDiaryPage* page = (new StudentDiaryPage((Student*)(&student)));
+        diary.AddStudentDiaryPage(page);
     }
     void RemoveStudent(Person& student)
     {
         students.Remove(&student);
+        diary.RemoveStudentDiaryPage(student.GetFirstName(), student.GetLastName());
     }
 
     void ChangeTeacher(Professor& professor)
@@ -87,15 +108,20 @@ public:
     }
     Class& operator+=(Person& student)
     {
-        students.Add(&student);
+        AddStudent(student);
         return *this;
     }
     Class& operator-=(Person& student)
     {
-        students.Remove(&student);
+        RemoveStudent(student);
         return *this;
     }
-        friend ostream& operator<<(ostream& out, Class& thisClass)
+    Diary& GetDiary()
+    {
+        return diary;
+    }
+
+    friend ostream& operator<<(ostream& out, Class& thisClass)
     {
         out << "\nClass " << thisClass.grade << " " << thisClass.number << endl;
         out << "Direction: " << thisClass.direction << endl;

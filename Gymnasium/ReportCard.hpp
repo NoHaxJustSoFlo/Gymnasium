@@ -13,6 +13,13 @@ protected:
     List<CompletedSubject> completedSubjects;
     float overallGrade;
 public:
+    ReportCard()
+    {
+        schoolName = "Nista";
+        educationLevel = Elementary;
+        grade = 1;
+        overallGrade = -1;
+    }
     ReportCard(string schoolName, EducationLevel educationLevel, int grade, List<CompletedSubject> completedSubjects)
     {
         this->schoolName = schoolName;
@@ -26,6 +33,14 @@ public:
             total += completedSubjects[i].GetAverageGrade();
         }
         overallGrade = total / amount;
+    }
+    ReportCard(ReportCard& reportCard)
+    {
+        schoolName = reportCard.schoolName;
+        educationLevel = reportCard.educationLevel;
+        grade = reportCard.grade;
+        completedSubjects = reportCard.completedSubjects;
+        overallGrade = reportCard.overallGrade;
     }
     EducationLevel GetEducationLevel()
     {
