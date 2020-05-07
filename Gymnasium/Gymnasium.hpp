@@ -12,6 +12,7 @@ class Gymnasium
 protected:
     string name;
     List<Class> classes;
+    List<Employee> employees;
 public:
     void AddClass(Class* newClass)
     {
@@ -25,10 +26,10 @@ public:
             if(currentClass.GetDirection() == direction && currentClass.GetGrade() == grade && currentClass.GetStudentAmount() < 20)
             {
                 float minimumPoints = currentClass.GetMinimumPoints();
-                float total = student.GetAverageGrade(Elementary, 6);
-                total += student.GetAverageGrade(Elementary, 7);
-                total += student.GetAverageGrade(Elementary, 8);
-                if(total * 2 + student.GetElementarySchoolTestPoints() > minimumPoints)
+                float total = student.GetAverageGradeInGrade(Elementary, 6);
+                total += student.GetAverageGradeInGrade(Elementary, 7);
+                total += student.GetAverageGradeInGrade(Elementary, 8);
+                if(total * 2 + student.GetPointsOnFinalTest(Elementary) > minimumPoints)
                 {
                     currentClass.AddStudent(student);
                     return true;
@@ -37,6 +38,28 @@ public:
         }
         return false;
     }
+    void AddEmployee(Employee* employee)
+    {
+        employees.Add(employee);
+    }
+    void RemoveEmployee(Employee* employee)
+    {
+        employees.Remove(employee);
+    }
+
+    List<Employee> GetEmployees(string position)
+    {
+        List<Employee> specificEmployees;
+        for(int i = 0; i < employees.Length(); i++)
+        {
+            if(employees[i].Position() == position)
+            {
+                specificEmployees.Add(&employees[i]);
+            }
+        }
+        return specificEmployees;
+    }
+
     string GetName()
     {
         return name;
@@ -53,6 +76,33 @@ public:
     {
         classes = _classes;
     }
+
+    friend ostream& operator<<(ostream& out, Gymnasium& gymnasium)
+    {
+        out << "\tGYMNASIUM: " << gymnasium.name << endl;
+        out << "Employees:\n";
+        for(int i = 0; i < gymnasium.employees.Length(); i++)
+        {
+            cout << gymnasium.employees[i] << endl;
+        }
+        for(int i = 0; i < gymnasium.classes.Length(); i++)
+        {
+            cout << gymnasium.classes[i] << endl;
+        }
+
+        return out;
+    }
+    Gymnasium& operator+=(Employee& employee)
+    {
+        employees.Add(&employee);
+        return *this;
+    }
+    Gymnasium& operator-=(Employee& employee)
+    {
+        employees.Remove(&employee);
+        return *this;
+    }
+
 };
 
 #endif // GYMNASIUM_HPP_INCLUDED

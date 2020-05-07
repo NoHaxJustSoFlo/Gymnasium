@@ -22,6 +22,7 @@ public:
         this->direction = direction;
         this->number = number;
     }
+
     void SetMinimumPoints(float m)
     {
         minimumPoints = m;
@@ -54,6 +55,7 @@ public:
     {
         students.Remove(&student);
     }
+
     void ChangeTeacher(Professor& professor)
     {
         teacher = &professor;
@@ -82,6 +84,28 @@ public:
     Person& operator[](int index)
     {
         return students[index];
+    }
+    Class& operator+=(Person& student)
+    {
+        students.Add(&student);
+        return *this;
+    }
+    Class& operator-=(Person& student)
+    {
+        students.Remove(&student);
+        return *this;
+    }
+        friend ostream& operator<<(ostream& out, Class& thisClass)
+    {
+        out << "\nClass " << thisClass.grade << " " << thisClass.number << endl;
+        out << "Direction: " << thisClass.direction << endl;
+        out << "Teacher: " << thisClass.teacher->GetFirstName() << " " << thisClass.teacher->GetLastName() << endl;
+        out << "Students: " << endl;
+        for(int i = 0; i < thisClass.students.Length(); i++)
+        {
+            out << thisClass.students[i];
+        }
+        return out;
     }
 };
 

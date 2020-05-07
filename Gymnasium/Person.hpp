@@ -27,6 +27,11 @@ public:
     {
         return lastName;
     }
+    friend ostream& operator<<(ostream& out, Person& person)
+    {
+        cout << person.firstName << " " << person.lastName << endl;
+        return out;
+    }
 };
 
 

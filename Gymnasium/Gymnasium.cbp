@@ -32,11 +32,30 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Class.hpp" />
+		<Unit filename="Cleaner.hpp" />
+		<Unit filename="CompletedSubject.hpp" />
+		<Unit filename="Date.hpp" />
+		<Unit filename="Diary.hpp" />
+		<Unit filename="Director.hpp" />
+		<Unit filename="Employee.hpp" />
+		<Unit filename="Enums.hpp" />
+		<Unit filename="FinalTest.hpp" />
+		<Unit filename="Grade.hpp" />
+		<Unit filename="Grades.hpp" />
+		<Unit filename="Gymnasium.hpp" />
+		<Unit filename="List.hpp" />
+		<Unit filename="Note.hpp" />
+		<Unit filename="Person.hpp" />
+		<Unit filename="Professor.hpp" />
+		<Unit filename="ReportCard.hpp" />
+		<Unit filename="SchoolDay.hpp" />
+		<Unit filename="Student.hpp" />
+		<Unit filename="StudentDiaryPage.hpp" />
+		<Unit filename="Subject.hpp" />
+		<Unit filename="Timetable.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
 			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>

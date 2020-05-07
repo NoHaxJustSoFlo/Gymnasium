@@ -14,8 +14,7 @@ public:
     }
     void ChangeSchoolDay(SchoolDays day, List<Subject> subjects)
     {
-
-    //dodati clear
+        days.Clear();
         for(int i = 0; i < days.Length(); i++)
         {
             if(days[i].GetDay() == day)

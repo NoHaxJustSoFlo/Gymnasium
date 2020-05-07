@@ -20,6 +20,9 @@
 #include "Person.hpp"
 #include "List.hpp"
 #include "Enums.hpp"
+#include "Director.hpp"
+#include "Employee.hpp"
+#include "Cleaner.hpp"
 
 using namespace std;
 

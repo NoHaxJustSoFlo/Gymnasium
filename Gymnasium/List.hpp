@@ -61,10 +61,10 @@ public:
         length += 1;
     }
 
-    void Add(T element)
+    /*void Add(T element)
     {
         Add(new T(element));
-    }
+    }*/
 
     void Remove(T* element)
     {
@@ -80,7 +80,7 @@ public:
         }
     }
 
-    void Remove(T element)
+    /*void Remove(T element)
     {
         Node* current = first;
         for(int i = 0; i < length; i++)
@@ -92,7 +92,7 @@ public:
             }
             current = current->next;
         }
-    }
+    }*/
 
     void RemoveAt(int index)
     {
